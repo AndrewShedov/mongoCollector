@@ -182,7 +182,7 @@ export async function runMongoCollector(config) {
     if (process.stdout.clearLine) process.stdout.clearLine(0);
     if (process.stdout.cursorTo) process.stdout.cursorTo(0);
 
-    console.log("\n✅ Collection completed!");
+    console.log("\n✅ Operation completed");
     console.log(`\n📊 Total values collected: ${totalCollected.toLocaleString()}`);
     console.log(`🧩 Documents written:      ${docsWritten.toLocaleString()}`);
 
