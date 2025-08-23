@@ -202,7 +202,7 @@ export async function runMongoCollector(config) {
     console.error("❌ Collector error:", err?.message ?? err);
     process.exit(1);
   } finally {
-    await inClient.close().catch(() => {});
-    await outClient.close().catch(() => {});
+    await inClient.close().catch(() => { });
+    await outClient.close().catch(() => { });
   }
 }
