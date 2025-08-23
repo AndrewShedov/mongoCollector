@@ -1,1 +1,1 @@
-# mongoCollector
+# superMaker

@@ -1,0 +1,39 @@
+{
+  "name": "mongo-collector",
+  "version": "0.1.0",
+  "description": "CLI tool to collect field values from a MongoDB collection into target collection with batching",
+  "main": "./src/index.js",
+  "exports": {
+    ".": "./src/index.js"
+  },
+  "type": "module",
+  "keywords": [
+    "mongodb",
+    "cli",
+    "collector",
+    "aggregation",
+    "big-data",
+    "data-processing",
+    "etl",
+    "mongodb-utils"
+  ],
+  "author": {
+    "name": "Andrew Shedov",
+    "url": "https://shedov.top"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AndrewShedov/mongo-collector.git"
+  },
+  "homepage": "https://github.com/AndrewShedov/mongo-collector",
+  "dependencies": {
+    "mongodb": "^6.16.0"
+  },
+  "files": [
+    "src"
+  ],
+  "bin": {
+    "mongo-collector": "./src/index.js"
+  }
+}
