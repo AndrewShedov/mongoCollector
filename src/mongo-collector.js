@@ -36,7 +36,7 @@ function toMaybeObjectId(id) {
   }
 }
 
-// 👉 нормализация значений
+// normalization of values
 function normalizeTopLevelElement(v, unwrapObjectId) {
   function unwrap(val) {
     if (val instanceof ObjectId) {
@@ -58,18 +58,18 @@ export async function runMongoCollector(config) {
   validateConfig(config);
   const { source, target, aggregation } = config;
 
-  console.log("🔗 Mongo Collector – start\n");
+  console.log("🚀 Start\n");
 
-  console.log("📥 Source:");
+  console.log("📥 Source");
   console.log(`   🌐 URI:        ${source.uri}`);
-  console.log(`   🗄️  Database:   ${source.db}`);
+  console.log(`   🗄️ Database:   ${source.db}`);
   console.log(`   📂 Collection: ${source.collection}`);
   console.log(`   🔑 Field:      ${source.field}`);
   console.log(`   🔍 Match:      ${JSON.stringify(source.match || {})}\n`);
 
-  console.log("📤 Target:");
+  console.log("📤 Target");
   console.log(`   🌐 URI:        ${target.uri}`);
-  console.log(`   🗄️  Database:   ${target.db}`);
+  console.log(`   🗄️ Database:   ${target.db}`);
   console.log(`   📂 Collection: ${target.collection}`);
   console.log(`   📝 Field:      ${target.field}`);
   console.log(
@@ -77,12 +77,14 @@ export async function runMongoCollector(config) {
       ? "false (always new doc)"
       : target.documentId ?? "(not provided → new doc)"}`
   );
-  console.log(`\n🧹 rewriteDocuments: ${target.rewriteDocuments}`);
-  console.log(`📂 rewriteArray:     ${target.rewriteArray}`);
-  console.log(`🔁 duplicatesInArray:${target.duplicatesInArray}`);
-  console.log(`🔓 unwrapObjectId:   ${target.unwrapObjectId}`);
-  console.log(`💾 allowDiskUse:     ${aggregation.allowDiskUse}`);
-  console.log(`📦 batchSize:        ${aggregation.batchSize}\n`);
+
+  console.log("\n⚙️ Config");
+  console.log(`   🧹 rewriteDocuments:  ${target.rewriteDocuments}`);
+  console.log(`   📂 rewriteArray:      ${target.rewriteArray}`);
+  console.log(`   🔁 duplicatesInArray: ${target.duplicatesInArray}`);
+  console.log(`   🔓 unwrapObjectId:    ${target.unwrapObjectId}`);
+  console.log(`   💾 allowDiskUse:      ${aggregation.allowDiskUse}`);
+  console.log(`   📦 batchSize:         ${aggregation.batchSize}\n`);
 
   const spinnerFrames = ["⠋", "⠙", "⠹", "⠸", "⠼", "⠴", "⠦", "⠧", "⠇", "⠏"];
   let spinnerIndex = 0;
@@ -110,7 +112,7 @@ export async function runMongoCollector(config) {
       const delRes = await outColl.deleteMany({});
       if (process.stdout.clearLine) process.stdout.clearLine(0);
       if (process.stdout.cursorTo) process.stdout.cursorTo(0);
-      console.log(`🧹 Target cleared: deleted ${delRes.deletedCount} docs.`);
+      console.log(`🧹 Target cleared: deleted ${delRes.deletedCount} docs\n`);
     }
 
     const cursor = inColl.aggregate(
@@ -180,9 +182,9 @@ export async function runMongoCollector(config) {
     if (process.stdout.clearLine) process.stdout.clearLine(0);
     if (process.stdout.cursorTo) process.stdout.cursorTo(0);
 
-    console.log("✅ Collection completed!");
-    console.log(`   📊 Total values collected: ${totalCollected.toLocaleString()}`);
-    console.log(`   🧩 Documents written:      ${docsWritten.toLocaleString()}`);
+    console.log("\n✅ Collection completed!");
+    console.log(`\n📊 Total values collected: ${totalCollected.toLocaleString()}`);
+    console.log(`🧩 Documents written:      ${docsWritten.toLocaleString()}`);
 
     const duration = performance.now() - start;
     const minutes = Math.floor(duration / 60000);
@@ -192,7 +194,7 @@ export async function runMongoCollector(config) {
     if (minutes > 0) timeString += `${minutes} min `;
     if (seconds > 0) timeString += `${seconds} sec `;
     timeString += `${milliseconds} ms`;
-    console.log(`\n⏱️ Time spent: ${timeString}`);
+    console.log(`\n⏱️ Lead time: ${timeString}`);
   } catch (err) {
     clearInterval(spinnerInterval);
     if (process.stdout.clearLine) process.stdout.clearLine(0);
