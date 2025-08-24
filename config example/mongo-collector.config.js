@@ -19,32 +19,37 @@ export default {
     field: "usersId",
     documentId: false,
     /*
-    documentId: false - create a new document.
+    false - create a new document.
     ---
     documentId: '68a8c8207090be6dd0e23a90' - add data to an already created document, or if it does not exist, create it - '68a8c8207090be6dd0e23a90' and add it there.
     */
 
-    rewriteDocuments: true, // true → clearing the entire collection
+    rewriteDocuments: true, // true - clearing the entire collection
     rewriteArray: true,
     /*
-    rewriteArray:true → rewrite array.
-    rewriteArray: false → complements an existing array
+    true - rewrite array.
+    false - complements an existing array
     */
 
     duplicatesInArray: false,
     /*
-    duplicatesInArray: false → eliminate duplicates (uses '$addToSet')
+     false - eliminate duplicates (uses '$addToSet')
     */
 
     unwrapObjectId: true
     /*
-    unwrapObjectId: true - ObjectId('68a8c8207090be6dd0e23a90') → '68a8c8207090be6dd0e23a90'
+    true - ObjectId('68a8c8207090be6dd0e23a90') → '68a8c8207090be6dd0e23a90'
     */
   },
 
   aggregation: {
     allowDiskUse: true,
-    batchSize: 3,
+    /*
+    true - MongoDB is allowed to use temporary disk space for intermediate data.
+    false - MongoDB processes data only in RAM.
+    */
+
+    batchSize: 3
     /*
     batchSize: 3 - the length of the array in the document. If the batchSize value is large and the input data size is large, the 16mb limit per document may be used up and an error will appear.
     */
