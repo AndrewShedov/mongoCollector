@@ -79,12 +79,12 @@ export async function runMongoCollector(config) {
   );
 
   console.log("\n⚙️ Config");
-  console.log(`   🧹 rewriteDocuments:  ${target.rewriteDocuments}`);
-  console.log(`   📂 rewriteArray:      ${target.rewriteArray}`);
-  console.log(`   🔁 duplicatesInArray: ${target.duplicatesInArray}`);
-  console.log(`   🔓 unwrapObjectId:    ${target.unwrapObjectId}`);
+  console.log(`   📦 batchSize:         ${aggregation.batchSize}`);
   console.log(`   💾 allowDiskUse:      ${aggregation.allowDiskUse}`);
-  console.log(`   📦 batchSize:         ${aggregation.batchSize}\n`);
+  console.log(`   📂 rewriteArray:      ${target.rewriteArray}`);
+  console.log(`   🔓 unwrapObjectId:    ${target.unwrapObjectId}`);
+  console.log(`   🧹 rewriteDocuments:  ${target.rewriteDocuments}`);
+  console.log(`   🔁 duplicatesInArray: ${target.duplicatesInArray}\n`);
 
   const spinnerFrames = ["⠋", "⠙", "⠹", "⠸", "⠼", "⠴", "⠦", "⠧", "⠇", "⠏"];
   let spinnerIndex = 0;
@@ -182,7 +182,7 @@ export async function runMongoCollector(config) {
     if (process.stdout.clearLine) process.stdout.clearLine(0);
     if (process.stdout.cursorTo) process.stdout.cursorTo(0);
 
-    console.log("\n✅ Operation completed");
+    console.log("✅ Operation completed");
     console.log(`\n📊 Total values collected: ${totalCollected.toLocaleString()}`);
     console.log(`🧩 Documents written:      ${docsWritten.toLocaleString()}`);
 

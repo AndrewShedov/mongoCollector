@@ -51,7 +51,7 @@ export default {
 
     batchSize: 3
     /*
-    batchSize: 3 - the length of the array in the document. If the batchSize value is large and the input data size is large, the 16mb limit per document may be used up and an error will appear.
+    3 - the length of the array in the document. If the batchSize value is large and the input data size is large, the 16mb limit per document may be used up and an error will appear.
     */
   },
 };
