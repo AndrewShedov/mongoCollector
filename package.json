@@ -1,6 +1,6 @@
 {
   "name": "mongo-collector",
-  "version": "0.1.13",
+  "version": "0.1.14",
   "description": "CLI tool to collect field values from a MongoDB collection into target collection with batching",
   "main": "./src/index.js",
   "exports": {
@@ -26,7 +26,7 @@
     "type": "git",
     "url": "git+https://github.com/AndrewShedov/mongoCollector.git"
   },
-  "homepage": "https://github.com/AndrewShedov/mongoCollector",
+  "homepage": "https://shedov.top",
   "dependencies": {
     "mongodb": "^6.16.0"
   },
