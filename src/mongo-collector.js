@@ -79,7 +79,7 @@ export async function runMongoCollector(config) {
   );
 
   console.log("\n⚙️ Config");
-  console.log(`   📦 batchSize:         ${aggregation.batchSize}`);
+  console.log(`   📦 batchSize:         ${aggregation.batchSize.toLocaleString("en-US")}`);
   console.log(`   💾 allowDiskUse:      ${aggregation.allowDiskUse}`);
   console.log(`   📂 rewriteArray:      ${target.rewriteArray}`);
   console.log(`   🔓 unwrapObjectId:    ${target.unwrapObjectId}`);
@@ -112,7 +112,7 @@ export async function runMongoCollector(config) {
       const delRes = await outColl.deleteMany({});
       if (process.stdout.clearLine) process.stdout.clearLine(0);
       if (process.stdout.cursorTo) process.stdout.cursorTo(0);
-      console.log(`🧹 Target cleared: deleted ${delRes.deletedCount} docs\n`);
+      console.log(`🧹 Target cleared: deleted ${delRes.deletedCount.toLocaleString("en-US")} docs\n`);
     }
 
     const cursor = inColl.aggregate(
@@ -183,8 +183,8 @@ export async function runMongoCollector(config) {
     if (process.stdout.cursorTo) process.stdout.cursorTo(0);
 
     console.log("✅ Operation completed");
-    console.log(`\n📊 Total values collected: ${totalCollected.toLocaleString()}`);
-    console.log(`🧩 Documents written:      ${docsWritten.toLocaleString()}`);
+    console.log(`\n📊 Total values collected: ${totalCollected.toLocaleString("en-US")}`);
+    console.log(`🧩 Documents written:      ${docsWritten.toLocaleString("en-US")}`);
 
     const duration = performance.now() - start;
     const minutes = Math.floor(duration / 60000);
