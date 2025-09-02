@@ -141,7 +141,7 @@ You can do any <code>match</code> configurations, for example:
 
 **⚠️ Make sure the array does not exceed 16MB, otherwise MongoDB will throw an error.** <br>
 
-#### An example of mongoCollector in operation: <br>
+An example of mongoCollector in operation: <br>
 
 <p align="center">
 <a href="https://youtu.be/5V4otU4KZaA?t=21">
