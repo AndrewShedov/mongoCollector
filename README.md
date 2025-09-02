@@ -20,6 +20,7 @@ Supports batching, large dataset processing, and flexible write configurations.
 <img src="https://raw.githubusercontent.com/AndrewShedov/mongoCollector/refs/heads/main/assets/screenshot_1.png" width="450" />
 
 ### Installation & Usage
+
 1. Install the package:
 
 ```bash

@@ -1,6 +1,6 @@
 {
   "name": "mongo-collector",
-  "version": "0.1.21",
+  "version": "0.1.22",
   "description": "CLI tool to collect field values from a MongoDB collection into target collection with batching",
   "main": "./src/index.js",
   "exports": {
