@@ -9,7 +9,7 @@ Supports batching, large dataset processing, and flexible write configurations.
 
 ### Features
 1. Extract values of any <code>field</code> from MongoDB documents.
-2. Data filtering using <code>match</code>.
+2. Data filtering using <code>$match</code>.
 3. <code>Batching</code> (batchSize) to avoid MongoDB’s 16MB per-document limit.
 4. <code>ObjectId</code> transformation: ObjectId('68a8c8207090be6dd0e23a90') → '68a8c8207090be6dd0e23a90'.
 5. Large collections supported via <code>allowDiskUse</code>.
