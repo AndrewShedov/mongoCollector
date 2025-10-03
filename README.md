@@ -35,7 +35,7 @@ npm i  mongo-collector
 }
 ```
 
-3. In the root of the project, create a file - **[mongo-collector.config.js](https://github.com/AndrewShedov/mongoCollector/blob/main/config%20example/mongo-collector.config.js)**.
+3. In the root of the project, create a file — [mongo-collector.config.js](https://github.com/AndrewShedov/mongoCollector/blob/main/config%20example/mongo-collector.config.js).
 
 Example of file contents:
 
@@ -69,7 +69,7 @@ export default {
 
 ```
 
-**⚠️ All parameters are required - if any is missing, the tool will throw an error.**
+**⚠️ All parameters are required.**
 
 4. Run from the project root:
    

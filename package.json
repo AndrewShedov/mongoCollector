@@ -1,6 +1,6 @@
 {
   "name": "mongo-collector",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "CLI tool for extracting values of a specific field from a MongoDB collection and saving them into a target collection.",
   "main": "./src/index.js",
   "exports": {
