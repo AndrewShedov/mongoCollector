@@ -147,7 +147,6 @@ An example of mongoCollector in operation: <br>
   <img src="https://raw.githubusercontent.com/AndrewShedov/mongoCollector/refs/heads/main/assets/screenshot_2.png" style="width: 100%; max-width: 100%;" alt="CRYSTAL v1.0 features"/>
 </a>
 </p>
-<br>
 
 [![SHEDOV.TOP](https://img.shields.io/badge/SHEDOV.TOP-black?style=for-the-badge)](https://shedov.top/) 
 [![CRYSTAL](https://img.shields.io/badge/CRYSTAL-black?style=for-the-badge)](https://crysty.ru/AndrewShedov)
