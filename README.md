@@ -139,13 +139,18 @@ You can do any <code>match</code> configurations, for example:
 
 **⚠️ Make sure the array does not exceed 16MB, otherwise MongoDB will throw an error.** <br>
 
-An example of mongoCollector in operation: <br>
+
+
+### An example of mongoCollector in operation: <br>
+
 
 <p align="center">
 <a href="https://youtu.be/5V4otU4KZaA?t=21">
-  <img src="https://raw.githubusercontent.com/AndrewShedov/mongoCollector/refs/heads/main/assets/screenshot_2.png" style="width: 100%; max-width: 100%;" alt="CRYSTAL v1.0 features"/>
+  <img src="https://raw.githubusercontent.com/AndrewShedov/mongoCollector/refs/heads/main/assets/screenshot_2.1.png" style="width: 100%; max-width: 100%;" alt="CRYSTAL v1.0 features"/>
 </a>
 </p>
+
+<br>
 
 [![SHEDOV.TOP](https://img.shields.io/badge/SHEDOV.TOP-black?style=for-the-badge)](https://shedov.top/) 
 [![CRYSTAL](https://img.shields.io/badge/CRYSTAL-black?style=for-the-badge)](https://crystal.you/AndrewShedov)
