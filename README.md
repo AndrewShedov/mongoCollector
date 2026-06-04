@@ -138,7 +138,6 @@ You can do any <code>match</code> configurations, for example:
 <code>batchSize: 10</code> - controls the length of the array inside each target document.
 
 **⚠️ Make sure the array does not exceed 16MB, otherwise MongoDB will throw an error.** <br>
-
 <br>
 
 ### An example of mongoCollector in operation: <br>
